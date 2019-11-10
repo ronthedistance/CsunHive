@@ -14,11 +14,12 @@ do
 	Service removal script
 	-----------------------
 	Please enter your choice:
-	1: Remove a service
+	1: Stop a runnning service
 	2: List some necessary services
 	3: List all running services
 	4: Quit Script
 	----------------------
+	Note that for option 2 and 3 you will need to scroll up after running in order to see the list
 
 EOF
 	read input
@@ -30,8 +31,6 @@ EOF
 		;;
 
 	"2")	echo "Here is our base list of necessary services"		
-		
-		while :
 		do  
 		echo -e"
 		===============
@@ -77,20 +76,13 @@ EOF
 		- unattended-upgrades
 		- urandom
 		- x11-common **another one you never want to delete....*"
-		read listquit 
-		if [ $listquit == "quit" ]
-			then
-			break		
-		else	
-			sleep 1 
-		fi
+	
 		
 done
 	;;   
 	"3")
 		echo "Listing all services"
 		service --status-all
-		sleep 5
 	;;
 	"4") echo "Goodbye"
 		exit 
