@@ -6,7 +6,6 @@ ${cat /etc/*release}
 unalias -a
 
 #gets rid of root users
-zeroUidFun(){
 	printf "\033[1;31mChecking for 0 UID users...\033[0m\n"
 	#--------- Check and Change UID's of 0 not Owned by Root ----------------
 	touch /zerouidusers
@@ -52,11 +51,8 @@ zeroUidFun(){
 	else
 		echo "No Zero UID Users"
 	fi
-	cont
-}
 
-
-
+	
 #this enables the firewall
 sudo ufw enable
 
