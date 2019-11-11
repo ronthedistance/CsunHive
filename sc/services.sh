@@ -64,7 +64,7 @@ EOF
 		- pulseaudio
 		? rc.local
 		+ resolvconf
-		- rsync   *i assume you're almost ALWAYS gonna deleeeeeeet this*
+		- rsync   *i assume you're almost ALWAYS gonna stop this one*
 		+ rsyslog
 		- saned
 		? sendsigs *one you probably don't want to delete*
@@ -92,5 +92,5 @@ done
 	*) echo invalid option
 	;;
 	esac 
-	sleep 3
+	sleep 1.5
 done
