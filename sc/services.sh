@@ -19,7 +19,8 @@ do
 	3: List all running services
 	4: Quit Script
 	----------------------
-	Note that for option 2 and 3 you will need to scroll up after running in order to see the list
+	*Note that for option 2 and 3 you will need to scroll up after running in order to see the list
+	*Note that this is meant to run on either a Debian or Ubuntu machine
 
 EOF
 	read input
