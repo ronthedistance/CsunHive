@@ -92,5 +92,5 @@ done
 	*) echo invalid option
 	;;
 	esac 
-	sleep 1.5
+	sleep 1
 done
