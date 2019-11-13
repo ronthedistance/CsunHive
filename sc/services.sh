@@ -78,6 +78,9 @@ EOF
 		- unattended-upgrades
 		- urandom
 		- x11-common **another one you never want to delete....*"
+		+ means fine to run
+		- means try to make sure it doesn't run or kill the service
+		? means it's not managed by the "service" binary, and usually fine to keep
 	
 	;;   
 	"3")
