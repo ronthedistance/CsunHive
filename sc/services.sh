@@ -1,7 +1,8 @@
 #!/bin/bash
 echo "Define unecessary...."
-#service --status-all
-  
+#Used to give a quick menu look for services and removal of services during competition. Helps keep your head on your shoulders to see your results.
+#
+
 #/bin/systemctl | grep running
 #sleep 1
 
@@ -19,7 +20,7 @@ do
 	3: List all running services
 	4: Quit Script
 	----------------------
-	*Note that for option 2 and 3 you will need to scroll up after running in order to see the list
+	*Note that for option 2 and 3 you will need to scroll up after inputting the number in order to see your list.
 	*Note that this is meant to run on either a Debian or Ubuntu machine
 
 EOF
@@ -32,7 +33,7 @@ EOF
 		;;
 
 	"2")	echo "Here is our base list of necessary services"		
-		do  
+		
 		echo -e"
 		===============
 		Service List
@@ -78,8 +79,6 @@ EOF
 		- urandom
 		- x11-common **another one you never want to delete....*"
 	
-		
-done
 	;;   
 	"3")
 		echo "Listing all services"
