@@ -111,10 +111,10 @@ do
 done
 
 #removes what are typically referred to as hacking tools within the competition
-sudo apt-get -y nmap*
-sudo apt-get -y wireshark*
-sudo apt-get -y zenmap*
-sudo apt-get -y nikto* 
+sudo apt-get -y purge nmap*
+sudo apt-get -y purge wireshark*
+sudo apt-get -y purge zenmap*
+sudo apt-get -y purge nikto* 
 sudo apt-get -y purge hydra*
 sudo apt-get -y purge john*
 sudo apt-get -y purge nikto*
