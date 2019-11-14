@@ -81,10 +81,10 @@ else
 fi
 
 #configure apache security
-printf "\033[1;31mSecuring Apache...\033[0m\n"
+printf "\nSecuring Apache...\n"
 	#--------- Securing Apache ----------------
 	a2enmod userdir
-
+	#note that this MAY cause some website downtime. Check to see if there is something important that www-data needs to access in order to keep apache running well.
 	chown -R root:root /etc/apache2
 	chown -R root:root /etc/apache
 
@@ -99,18 +99,22 @@ printf "\033[1;31mSecuring Apache...\033[0m\n"
 
 	systemctl restart apache2.service
 
+#look at suspicious files. This one looks for ELF files in common file extensions
+find / -regex ".*\.\(gz\|tar\|rar\|gzip\|zip\|sh\|txt\jpg\|gif\|png\|jpeg\)" -type f -exec file -p '{}' \; | grep ELF | cut -d":" -f1
+#look at suspicious files. This one looks for non-image files in image media extensions
+find / -regex ".*\.\(jpg\|gif\|png\|jpeg\)" -type f -exec file -p '{}' \; | grep -v image
 
-#finds media files with these suffixes and removes them
+#finds media files with these suffixes and removes them, passes in an array
 for suffix in mp3 txt wav wma aac mp4 mov avi gif jpg png bmp img exe msi bat sh
 do
   sudo find /home -name *.$suffix
 done
 
 #removes what are typically referred to as hacking tools within the competition
-sudo apt-get -y nmap
-sudo apt-get -y wireshark
-sudo apt-get -y zenmap
-sudo apt-get -y nikto 
+sudo apt-get -y nmap*
+sudo apt-get -y wireshark*
+sudo apt-get -y zenmap*
+sudo apt-get -y nikto* 
 sudo apt-get -y purge hydra*
 sudo apt-get -y purge john*
 sudo apt-get -y purge nikto*
