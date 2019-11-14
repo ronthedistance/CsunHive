@@ -2,11 +2,11 @@
 #Tells you the version number. If it's not the latest version, you may get points for upgrading this.
 ${cat /etc/*release}
 
-#gets rid of pesky aliases
+#unalias all commands
 unalias -a
 
 #gets rid of root users
-	printf "\033[1;31mChecking for 0 UID users...\033[0m\n"
+	printf "\nChecking for 0 UID users...\n"
 	#--------- Check and Change UID's of 0 not Owned by Root ----------------
 	touch /zerouidusers
 	touch /uidusers
