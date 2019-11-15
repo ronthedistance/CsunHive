@@ -32,7 +32,7 @@ EOF
 		service $serviceremove stop
 		;;
 
-	"2")	echo "Here is our base list of necessary services"		
+	"2")	echo "Here is our base list of necessary services	
 		
 		cat<<EOF"
 		===============
