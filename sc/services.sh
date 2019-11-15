@@ -34,7 +34,7 @@ EOF
 
 	"2")	echo "Here is our base list of necessary services	
 		
-		cat<<EOF"
+		cat<<EOF
 		===============
 		Service List
 		---------------
