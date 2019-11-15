@@ -34,7 +34,7 @@ EOF
 
 	"2")	echo "Here is our base list of necessary services"		
 		
-		echo -e"
+		cat<<EOF"
 		===============
 		Service List
 		---------------
@@ -81,7 +81,7 @@ EOF
 		+ means fine to run
 		- means try to make sure it doesn't run or kill the service
 		? means it's not managed by the "service" binary, and usually fine to keep
-	
+EOF
 	;;   
 	"3")
 		echo "Listing all services"
