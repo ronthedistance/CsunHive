@@ -27,7 +27,7 @@ EOF
 	read input
 	
 	case "$input" in
-	"1" )   echo "Please select a service to remove"
+	"1" )   echo "Please select a service to stop"
 		read serviceremove
 		service $serviceremove stop
 		;;
